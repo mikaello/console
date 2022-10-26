@@ -14,7 +14,8 @@ COPY --from=build /go/src/github.com/openshift/console/pkg/graphql/schema.graphq
 LABEL io.k8s.display-name="OpenShift Console" \
       io.k8s.description="This is a component of OpenShift Container Platform and provides a web console." \
       io.openshift.tags="openshift" \
-      maintainer="Samuel Padgett <spadgett@redhat.com>"
+      maintainer="Samuel Padgett <spadgett@redhat.com>" \
+      org.opencontainers.image.source=https://github.com/openshift/console
 
 # doesn't require a root user.
 USER 1001
